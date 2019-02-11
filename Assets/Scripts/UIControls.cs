@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * This script is entirely for anticheat purposes, to prevent blocking.
- */
-
-public class EnemyAttack : MonoBehaviour
+public class UIControls : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
 
 				}
 					
-				target = Camera.main.ScreenToWorldPoint(Input.MousePosition());
+				target = Camera.main.ScreenToWorldPoint(Input.mousePosition());
 
 			}
 

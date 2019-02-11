@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	
+	public TowerEnemyManager targeter;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
