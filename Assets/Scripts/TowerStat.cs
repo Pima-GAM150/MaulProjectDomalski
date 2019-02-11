@@ -13,4 +13,6 @@ public class TowerStat : MonoBehaviour
 	public int fx;		// what effect the tower might employ (requires further thought)
 	public float fxMagnitude; // how powerful/long the effect lasts
 
+	public PlayerStat owner;
+
 }
