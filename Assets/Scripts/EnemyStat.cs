@@ -26,4 +26,10 @@ public class EnemyStat : MonoBehaviour
 	public int defMagnitude;	// amount of def, determines damage reduction
 	public int goldValue; //how much gold the enemy gives when killed
 
+	public void Death(){
+
+		Destroy(gameObject);
+
+	}
+
 }

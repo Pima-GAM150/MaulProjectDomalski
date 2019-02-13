@@ -7,6 +7,13 @@ public class TowerEnemyManager : MonoBehaviour
 
 	public EnemyStat target;
 	public List<EnemyStat> targets;
+
+	void Update(){
+
+		if(target == null && targets.Count > 0)
+			target = targets[0];
+
+	}
     
 	void OnTriggerEnter(Collider hit){
 
