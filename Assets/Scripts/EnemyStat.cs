@@ -25,9 +25,11 @@ public class EnemyStat : MonoBehaviour
 	public int def;	// type of defense (0 - light, 1 - medium, 2 - heavy, 3 - fortified)
 	public int defMagnitude;	// amount of def, determines damage reduction
 	public int goldValue; //how much gold the enemy gives when killed
+	public GameController controller;
 
 	public void Death(){
 
+		controller.curEnemies--;
 		Destroy(gameObject);
 
 	}

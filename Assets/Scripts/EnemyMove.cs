@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+	public Transform goal;
+	public List<Transform> goals;
+	public EnemyStat me;
+	public GameController controller;
+	public NavMeshAgent agent;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	void Start () {
+		
+		agent = GetComponent<NavMeshAgent>();
+		goal = goals[0];
+		agent.destination = goal.position; 
+
+	}
+
+	void Update(){
+
+		if(Vector3.Distance(transform.position, goal.position) < 5){
+
+			goals.Remove(goal);
+
+			if(goals.Count > 0){
+
+				goal = goals[0];
+				agent.destination = goal.position;
+
+			}
+			else{
+
+				controller.lives--;
+				me.Death();
+
+			}
+
+		}
+
+	}
+
 }
