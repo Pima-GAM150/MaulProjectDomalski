@@ -16,11 +16,11 @@ public class TowerAttack : MonoBehaviour
 
 		if(isPlayer && timer >= 1 && targeter.target != null){
 
-			GameObject x = Instantiate(bullet, transform, Quaternion.Identity);
+			GameObject x = Instantiate(bullet, transform.position, Quaternion.identity);
 			x.GetComponent<Bullet>().target = targeter.target.transform.position;
 
 			int dmg = stats.dmg;
-			float mod = 1.0;
+			float mod = 1.0f;
 
 			switch(stats.atk){
 

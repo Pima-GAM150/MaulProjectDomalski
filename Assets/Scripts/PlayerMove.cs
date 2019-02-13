@@ -23,15 +23,15 @@ public class PlayerMove : MonoBehaviour
 
 				}
 					
-				target = Camera.main.ScreenToWorldPoint(Input.mousePosition());
+				target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 			}
 
-			if(Math.Abs((target - transform.position).magnitude) > 0.5){
+			if(Mathf.Abs((target - transform.position).magnitude) > 0.5){
 
-				if(isBuilding && Math.Abs((target - transform.position).magnitude) < 1.0){
+				if(isBuilding && Mathf.Abs((target - transform.position).magnitude) < 1.0){
 
-					build.BuildSelected();
+					//build.BuildSelected();
 
 				}
 
