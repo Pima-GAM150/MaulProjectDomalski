@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviourPun
 {	
 
-	public bool isPlayer; // adding online functionality later (because I am horribly confused), this determines if this this specific script belongs to this comp
 	public bool isBuilding; // determines if player is attempting to build something
 	public PlayerStat player;
 	public PlayerBuild build;
@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     
     void Update(){
 
-		if(isPlayer){
+		if(photonView.IsMine){
 
 			if(Input.GetKeyDown(KeyCode.Mouse1)){
 

@@ -22,6 +22,21 @@ public class Launcher : MonoBehaviourPunCallbacks{
 
 	}
 
+	public void Connect(){
+
+		if (PhotonNetwork.IsConnected){
+
+			PhotonNetwork.JoinRandomRoom();
+
+		}
+
+		else{
+
+			PhotonNetwork.ConnectUsingSettings();
+
+		}
+	}
+
 	public override void OnJoinedRoom(){
 		
 
