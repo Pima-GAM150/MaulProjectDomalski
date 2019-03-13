@@ -11,6 +11,8 @@ public class PlayerBuild : MonoBehaviour
     public GameObject BuildMenu, StandardMenu, cancelMenu, mouseInd;
     public PlayerStat stats;
     public List<GameObject> Towers;
+	public List<Button> buttons;
+	public List<int> prices;
     public int selectedTower;
     public bool isBuilding;
 
@@ -23,6 +25,16 @@ public class PlayerBuild : MonoBehaviour
     {
 
         if (isBuilding) {
+
+			int t = 0;
+			foreach(Button x in buttons){
+
+				if(prices[t] > stats.gold)
+					x.interactable = false;
+				else
+					x.interactable = true;
+
+			}
 
             mouseInd.SetActive(true);
 
