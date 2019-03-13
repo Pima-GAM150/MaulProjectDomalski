@@ -28,29 +28,29 @@ public class PlayerBuild : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return)) {
 
-                GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower], mouseInd.transform.position, Quaternion.identity);
-                temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
-                temp.GetComponent<TowerStat>().owner = stats;
+                //GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower], mouseInd.transform.position, Quaternion.identity);
+                //temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
+                //temp.GetComponent<TowerStat>().owner = stats;
             
             }
 			else if(Input.GetKeyDown(KeyCode.A)){
 
-				mousInd.transofm.Translate(-1. 0, 0);
+				mouseInd.transform.Translate(-1, 0, 0);
 
 			}
 			else if(Input.GetKeyDown(KeyCode.D)){
 
-				mousInd.transofm.Translate(1. 0, 0);
+				mouseInd.transform.Translate(1, 0, 0);
 
 			}
 			else if(Input.GetKeyDown(KeyCode.S)){
 
-				mousInd.transofm.Translate(0. 0, -1);
+				mouseInd.transform.Translate(0, 0, -1);
 
 			}
 			else if(Input.GetKeyDown(KeyCode.W)){
 
-				mousInd.transofm.Translate(0. 0, 1);
+				mouseInd.transform.Translate(0, 0, 1);
 
 			}
 
