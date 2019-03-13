@@ -40,9 +40,9 @@ public class PlayerBuild : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return)) {
 
-                //GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower], mouseInd.transform.position, Quaternion.identity);
-                //temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
-                //temp.GetComponent<TowerStat>().owner = stats;
+                GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower].name, mouseInd.transform.position, Quaternion.identity);
+                temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
+                temp.GetComponent<TowerStat>().owner = stats;
             
             }
 			else if(Input.GetKeyDown(KeyCode.A)){

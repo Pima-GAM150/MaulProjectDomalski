@@ -9,8 +9,8 @@
       <File FileName="Assets/Scripts/TowerEnemyManager.cs" Line="22" Column="22" />
       <File FileName="Assets/Scripts/TowerStat.cs" Line="10" Column="20" />
       <File FileName="Assets/Scripts/Launcher.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="12" Column="12" />
-      <File FileName="Assets/Scripts/PlayerStat.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="45" Column="19" />
+      <File FileName="Assets/Scripts/PlayerStat.cs" Line="1" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
