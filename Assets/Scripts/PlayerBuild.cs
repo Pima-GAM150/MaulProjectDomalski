@@ -15,9 +15,9 @@ public class PlayerBuild : MonoBehaviour
     public bool isBuilding;
 
     public void Build() { BuildMenu.SetActive(true); StandardMenu.SetActive(false); }
-    public void Cancel() { BuildMenu.SetActive(false); StandardMenu.SetActive(true); isBuilding = false; }
-    public void CancelIn() { BuildMenu.SetActive(true);  cancelMenu.SetActive(false); isBuilding = false; }
-    public void BuildX(int x) { BuildMenu.SetActive(false); cancelMenu.SetActive(true); isBuilding = true; selectedTower = x; }
+	public void Cancel() { BuildMenu.SetActive(false); StandardMenu.SetActive(true); isBuilding = false; mouseInd.SetActive(false);}
+	public void CancelIn() { BuildMenu.SetActive(true);  cancelMenu.SetActive(false); isBuilding = false; mouseInd.SetActive(false);}
+	public void BuildX(int x) { BuildMenu.SetActive(false); cancelMenu.SetActive(true); isBuilding = true; selectedTower = x;  mouseInd.SetActive(true);}
 
     private void Update()
     {
