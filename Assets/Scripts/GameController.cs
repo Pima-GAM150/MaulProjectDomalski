@@ -8,4 +8,12 @@ public class GameController : MonoBehaviour
     public int wave;
     public List<GameObject> waves;
     public int lives;
+	public float timer;
+
+	void Update{
+
+
+
+	}
+
 }
