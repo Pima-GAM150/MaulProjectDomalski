@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 120
-  atk: 3
+  atk: 1
   range: 20
   spd: 4
   fx: 0

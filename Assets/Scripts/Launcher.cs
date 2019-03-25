@@ -6,11 +6,14 @@ public class Launcher : MonoBehaviourPunCallbacks{
 	
 	private byte maxPlayersPerRoom = 9;
 
+	bool isConnecting;
+
 	void Awake(){PhotonNetwork.AutomaticallySyncScene = true;}
 		
 	public override void OnConnectedToMaster(){
 
-		PhotonNetwork.JoinRandomRoom();
+		if(isConnecting)
+			PhotonNetwork.JoinRandomRoom();
 
 	}
 
@@ -23,6 +26,8 @@ public class Launcher : MonoBehaviourPunCallbacks{
 	}
 
 	public void Connect(){
+
+		isConnecting = true;
 
 		if (PhotonNetwork.IsConnected){
 

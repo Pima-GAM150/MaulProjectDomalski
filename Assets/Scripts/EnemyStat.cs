@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 /*
  * to clarify def type vs attack type i've built myself this handy dandy chart Damage reduction
@@ -18,7 +20,7 @@ using UnityEngine;
  * 
  */
 
-public class EnemyStat : MonoBehaviour
+public class EnemyStat : MonoBehaviourPunCallbacks, IPunObservable
 {
    
 	public int hp;	// amount of hp
@@ -27,9 +29,28 @@ public class EnemyStat : MonoBehaviour
 	public int goldValue; //how much gold the enemy gives when killed
 	public GameController controller;
 
+	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
+
+		if(stream.IsWriting)
+			stream.SendNext(hp);
+		else
+			this.hp = (int)stream.ReceiveNext();
+
+	}
+
+	void Update(){
+
+		if(hp < 1){
+
+			Death();
+
+		}
+
+	}
+
 	public void Death(){
 
-		controller.curEnemies--;
+		//controller.curEnemies--;
 		Destroy(gameObject);
 
 	}

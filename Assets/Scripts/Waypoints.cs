@@ -8,7 +8,7 @@ public class Waypoints : MonoBehaviour
 	public static Transform Red, Blue, Teal, Orange, Purple, Yellow, Green, Pink, Gray;
 	public Transform Reds, Blues, Teals, Oranges, Purples, Yellows, Greens, Pinks, Grays;
 
-	void Start(){
+	void Awake(){
 
 		Red = Reds;
 		Blue = Blues;

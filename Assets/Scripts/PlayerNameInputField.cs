@@ -12,6 +12,7 @@ public class PlayerNameInputField : MonoBehaviour
 	const string playerNamePrefKey = "PlayerName";
 
 
+
 	void Start () {
 
 
@@ -32,6 +33,8 @@ public class PlayerNameInputField : MonoBehaviour
 		PhotonNetwork.NickName =  defaultName;
 
 	}
+
+
 
 
 	public void SetPlayerName(string value){

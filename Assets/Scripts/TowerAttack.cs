@@ -9,7 +9,7 @@ public class TowerAttack : MonoBehaviourPunCallbacks, IPunObservable
 	public TowerEnemyManager targeter;
 	public TowerStat stats;
 	public GameObject bullet;
-	public bool isPlayer; // adding online functionality later (because I am horribly confused), this determines if this this specific script belongs to this comp
+	//public bool isPlayer; // adding online functionality later (because I am horribly confused), this determines if this this specific script belongs to this comp
 	public float timer;
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){}
@@ -18,7 +18,7 @@ public class TowerAttack : MonoBehaviourPunCallbacks, IPunObservable
 
 
 
-		if(isPlayer && timer >= 1 && targeter.target != null){
+		if(timer >= 1 && targeter.target != null){
 
 			GameObject x = Instantiate(bullet, transform.position, Quaternion.identity);
 			x.GetComponent<Bullet>().target = targeter.target.transform.position;
@@ -110,6 +110,7 @@ public class TowerAttack : MonoBehaviourPunCallbacks, IPunObservable
 			if(targeter.target.hp <= 0){
 
 				stats.owner.gold += targeter.target.goldValue;
+				//PhotonView tar
 				targeter.target.Death();
 
 			}

@@ -17,7 +17,7 @@ public class EnemyMove : MonoBehaviour
 		agent = GetComponent<NavMeshAgent>();
 
 
-		string temp = parent.gameObject.name;
+		string temp = transform.parent.gameObject.name;
 		goals = new List<Transform>();
 
 		if(temp.Contains("Red")){

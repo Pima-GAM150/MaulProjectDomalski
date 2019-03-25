@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerBuild : MonoBehaviour
+public class PlayerBuild : MonoBehaviourPunCallbacks
 {
 
     public GameObject BuildMenu, StandardMenu, cancelMenu, mouseInd;
@@ -16,6 +16,56 @@ public class PlayerBuild : MonoBehaviour
     public int selectedTower;
     public bool isBuilding;
 
+	void Start(){
+
+		int index = 0;
+
+		foreach(Player p in PhotonNetwork.CurrentRoom.Players.Values){
+
+			if(p.UserId.Equals(PhotonNetwork.LocalPlayer.UserId)){
+
+				break;
+
+			}
+			index++;
+		}
+
+
+		switch(index){
+
+		case 0:
+			mouseInd.transform.position = new Vector3(Waypoints.Gray.position.x, 0, Waypoints.Gray.position.z);
+			break;
+		case 1:
+			mouseInd.transform.position = new Vector3(Waypoints.Red.position.x, 0, Waypoints.Red.position.z);
+			break;
+		case 2:
+			mouseInd.transform.position = new Vector3(Waypoints.Blue.position.x, 0, Waypoints.Blue.position.z);
+			break;
+		case 3:
+			mouseInd.transform.position = new Vector3(Waypoints.Teal.position.x, 0, Waypoints.Teal.position.z);
+			break;
+		case 4:
+			mouseInd.transform.position = new Vector3(Waypoints.Yellow.position.x, 0, Waypoints.Yellow.position.z);
+			break;
+		case 5:
+			mouseInd.transform.position = new Vector3(Waypoints.Orange.position.x, 0, Waypoints.Orange.position.z);
+			break;
+		case 6:
+			mouseInd.transform.position = new Vector3(Waypoints.Purple.position.x, 0, Waypoints.Purple.position.z);
+			break;
+		case 7:
+			mouseInd.transform.position = new Vector3(Waypoints.Green.position.x, 0, Waypoints.Green.position.z);
+			break;
+		case 8:
+			mouseInd.transform.position = new Vector3(Waypoints.Pink.position.x, 0, Waypoints.Pink.position.z);
+			break;
+
+
+		}
+
+	}
+
     public void Build() { BuildMenu.SetActive(true); StandardMenu.SetActive(false); }
 	public void Cancel() { BuildMenu.SetActive(false); StandardMenu.SetActive(true); isBuilding = false; mouseInd.SetActive(false);}
 	public void CancelIn() { BuildMenu.SetActive(true);  cancelMenu.SetActive(false); isBuilding = false; mouseInd.SetActive(false);}
@@ -23,7 +73,8 @@ public class PlayerBuild : MonoBehaviour
 
     private void Update()
     {
-
+		if(photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+			return;
         if (isBuilding) {
 
 			int t = 0;
@@ -86,7 +137,7 @@ public class PlayerBuild : MonoBehaviour
 
 				if(ispaid){
                		GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower].name, mouseInd.transform.position, Quaternion.identity);
-                	temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
+                	temp.GetComponent<MeshRenderer>().material = stats.playerColor;
                	 	temp.GetComponent<TowerStat>().owner = stats;
 				}
             
