@@ -40,9 +40,55 @@ public class PlayerBuild : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return)) {
 
-                GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower].name, mouseInd.transform.position, Quaternion.identity);
-                temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
-                temp.GetComponent<TowerStat>().owner = stats;
+				bool ispaid = false;
+
+				switch(selectedTower){
+
+					case 0:
+					if(stats.gold >= 7){
+						stats.gold-= 7;
+						ispaid = true;
+					}
+					break;
+					case 1:
+					if(stats.gold >= 80){
+						stats.gold-= 80;
+						ispaid = true;
+					}
+					break;
+					case 2:
+					if(stats.gold >= 120){
+						stats.gold-= 120;
+						ispaid = true;
+					}
+					break;
+					case 3:
+					if(stats.gold >= 170){
+						stats.gold-= 170;
+						ispaid = true;
+					}
+					break;
+					case 4:
+					if(stats.gold >= 250){
+						stats.gold-= 250;
+						ispaid = true;
+					}
+					break;
+					case 5:
+					if(stats.gold >= 310){
+						stats.gold-= 310;
+						ispaid = true;
+					}
+					break;
+
+
+				}
+
+				if(ispaid){
+               		GameObject temp = PhotonNetwork.Instantiate(Towers[selectedTower].name, mouseInd.transform.position, Quaternion.identity);
+                	temp.GetComponent<SpriteRenderer>().color = stats.playerColor;
+               	 	temp.GetComponent<TowerStat>().owner = stats;
+				}
             
             }
 			else if(Input.GetKeyDown(KeyCode.A)){
