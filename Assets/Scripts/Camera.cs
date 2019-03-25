@@ -10,22 +10,22 @@ public class Camera : MonoBehaviour
     void Update()
     {
         
-		if(Input.GetKey(KeyCode.Up)){
+		if(Input.GetKey(KeyCode.UpArrow)){
 
-			transform.Translate(new Vector3(0, 0, Time.deltaTime* cameraspeed));
-
-		}
-		if(Input.GetKey(KeyCode.Down)){
-
-			transform.Translate(new Vector3(0, 0, Time.deltaTime* cameraspeed * -1));
+			transform.Translate(new Vector3(0, Time.deltaTime* cameraspeed, 0));
 
 		}
-		if(Input.GetKey(KeyCode.Right)){
+		if(Input.GetKey(KeyCode.DownArrow)){
+
+			transform.Translate(new Vector3(0, Time.deltaTime* cameraspeed * -1), 0);
+
+		}
+		if(Input.GetKey(KeyCode.RightArrow)){
 
 			transform.Translate(new Vector3(Time.deltaTime* cameraspeed, 0, 0));
 
 		}
-		if(Input.GetKey(KeyCode.Left)){
+		if(Input.GetKey(KeyCode.LeftArrow)){
 
 			transform.Translate(new Vector3(Time.deltaTime* cameraspeed * -1, 0, 0));
 

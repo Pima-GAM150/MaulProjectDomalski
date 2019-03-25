@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 90413882234854850}
   - component: {fileID: 90413882234854854}
   - component: {fileID: 1140206041211439026}
+  - component: {fileID: 5774922512692913866}
+  - component: {fileID: 2062413550192698780}
   m_Layer: 0
   m_Name: Tech_ Ion
   m_TagString: Untagged
@@ -130,6 +132,44 @@ MonoBehaviour:
   bullet: {fileID: 8950606678473312988, guid: feb77b97d23bb5343bfd287193d37e2a, type: 3}
   isPlayer: 0
   timer: 0
+--- !u!114 &5774922512692913866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90413882234854877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1140206041211439026}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!208 &2062413550192698780
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90413882234854877}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7515045027327697649
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +224,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7515045027327697649}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 15

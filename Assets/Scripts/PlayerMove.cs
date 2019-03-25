@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviourPun
 
 		if(photonView.IsMine){
 
-			if(Input.GetKeyDown(KeyCode.Mouse1)){
+			/**if(Input.GetKeyDown(KeyCode.Mouse1)){
 
 				if(isBuilding){
 
@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviourPun
 					
 				target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-			}
+			}**/
 
 			if(Mathf.Abs((target - transform.position).magnitude) > 0.5){
 
