@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStat : MonoBehaviour
 {
@@ -10,5 +11,12 @@ public class PlayerStat : MonoBehaviour
 
 	public int type; // what series of towers that player is able to build, (0 - none has to choose, 1 - tech ) more races will be added if/when developed
 	public int gold; // amount of currency the player has available
+	public Text tex;
+
+	void Update(){
+
+		tex.text = "Gold: " + gold;
+
+	}
 
 }

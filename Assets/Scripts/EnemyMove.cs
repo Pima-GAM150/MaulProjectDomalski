@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-    
 	public Transform goal;
 	public List<Transform> goals;
 	public EnemyStat me;

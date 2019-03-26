@@ -130,7 +130,6 @@ MonoBehaviour:
   targeter: {fileID: 913725188337832401}
   stats: {fileID: 3778961765580053255}
   bullet: {fileID: 8950606678473312988, guid: feb77b97d23bb5343bfd287193d37e2a, type: 3}
-  isPlayer: 0
   timer: 0
 --- !u!114 &2829589052128567503
 MonoBehaviour:

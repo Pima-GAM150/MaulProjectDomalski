@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class Launcher : MonoBehaviourPunCallbacks{
-	
+
+
 	private byte maxPlayersPerRoom = 9;
 
 	bool isConnecting;
