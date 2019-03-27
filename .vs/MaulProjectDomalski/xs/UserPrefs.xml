@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{3292ECCB-8E0A-F072-BEAD-A9AC1DB68B73}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerBuild.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TowerAttack.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyMove.cs" Line="39" Column="1" />
+      <File FileName="Assets/Scripts/EnemyMove.cs" Line="87" Column="7" />
       <File FileName="Assets/Scripts/EnemyStat.cs" Line="5" Column="1" />
-      <File FileName="Assets/Scripts/TowerAttack.cs" Line="109" Column="1" />
+      <File FileName="Assets/Scripts/TowerAttack.cs" Line="18" Column="14" />
       <File FileName="Assets/Scripts/PlayerMove.cs" Line="26" Column="64" />
       <File FileName="Assets/Scripts/Bullet.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/TowerEnemyManager.cs" Line="22" Column="22" />
       <File FileName="Assets/Scripts/TowerStat.cs" Line="10" Column="20" />
-      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="77" Column="5" />
+      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="140" Column="54" />
       <File FileName="Assets/Scripts/PlayerStat.cs" Line="1" Column="26" />
       <File FileName="Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs" Line="708" Column="30" />
       <File FileName="Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs" Line="367" Column="1" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="37" Column="13" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="40" Column="19" />
+      <File FileName="Assets/Scripts/UIControls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

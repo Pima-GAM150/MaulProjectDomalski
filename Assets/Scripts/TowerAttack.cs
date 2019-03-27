@@ -14,7 +14,7 @@ public class TowerAttack : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-
+        Destroy(gameObject.GetComponent<PhotonTransformView>());
         Destroy(photonView);
 
 

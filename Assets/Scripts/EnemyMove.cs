@@ -84,7 +84,7 @@ public class EnemyMove : MonoBehaviour
 			}
 			else{
 
-				controller.lives--;
+				//controller.lives--;
 				me.Death();
 
 			}
