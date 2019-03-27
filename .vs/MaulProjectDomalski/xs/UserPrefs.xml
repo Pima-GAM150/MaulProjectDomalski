@@ -8,9 +8,11 @@
       <File FileName="Assets/Scripts/Bullet.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/TowerEnemyManager.cs" Line="22" Column="22" />
       <File FileName="Assets/Scripts/TowerStat.cs" Line="10" Column="20" />
-      <File FileName="Assets/Scripts/Launcher.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="58" Column="103" />
+      <File FileName="Assets/Scripts/PlayerBuild.cs" Line="77" Column="5" />
       <File FileName="Assets/Scripts/PlayerStat.cs" Line="1" Column="26" />
+      <File FileName="Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs" Line="708" Column="30" />
+      <File FileName="Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs" Line="367" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="37" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

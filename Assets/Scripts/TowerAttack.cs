@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class TowerAttack : MonoBehaviourPunCallbacks, IPunObservable
+public class TowerAttack : MonoBehaviourPunCallbacks
 {
 	
 	public TowerEnemyManager targeter;
@@ -12,9 +12,17 @@ public class TowerAttack : MonoBehaviourPunCallbacks, IPunObservable
 	//public bool isPlayer; // adding online functionality later (because I am horribly confused), this determines if this this specific script belongs to this comp
 	public float timer;
 
-	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){}
+    private void Start()
+    {
 
-	void Update(){
+        Destroy(photonView);
+
+
+    }
+
+
+
+    void Update(){
 
 
 
