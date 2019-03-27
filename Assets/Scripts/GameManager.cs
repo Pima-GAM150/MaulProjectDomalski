@@ -28,9 +28,10 @@ public class GameManager : MonoBehaviourPunCallbacks
 
 
 			numPlayers.text = PhotonNetwork.CurrentRoom.PlayerCount + " players connected";
+			HostButton.gameObject.SetActive(true);
 
 		}
-		else{
+		else if(PhotonNetwork.IsConnected){
 
 			numPlayers.text = PhotonNetwork.CurrentRoom.PlayerCount + " players connected\nWaiting for host to start game...";
 
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
 	public void newPanel(){
 
-		panel.SetActive(true);
+		HostButton.gameObject.SetActive(true);
 
 		if(PhotonNetwork.IsMasterClient){
 
