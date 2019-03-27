@@ -73,8 +73,8 @@ public class PlayerBuild : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-		if(photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-			return;
+		//if(photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+		//	return;
         if (isBuilding) {
 
 			int t = 0;
