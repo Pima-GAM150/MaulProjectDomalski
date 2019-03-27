@@ -73,9 +73,10 @@ public class GameController : MonoBehaviour, IPunObservable
 			time.gameObject.SetActive(true);
 			time.text = "" + timer;
 
-			if(timer > 30f){
+			if(timer > 30f && !inwave){
 
 				curWave = PhotonNetwork.Instantiate(waves[wave].name, new Vector3(), Quaternion.identity);
+				inwave = true;
 
 			}
 
